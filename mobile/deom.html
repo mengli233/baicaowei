@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>Document</title>
+	<link rel="stylesheet" href="style/css/index.css">
+	<link rel="stylesheet" href="style/css/swiper.min.css">
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/resp.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/fly.js"></script>
+</head>
+<body ng-controller="cont">
+	<div ng-view></div>
+
+	<script>
+		var app=angular.module("myapp",['ngRoute'],RouteConfig);
+		function RouteConfig($routeProvider){
+		  $routeProvider
+		    .when('/',{
+		      templateUrl:"tml/index.html"
+		    })
+		    .when('/list',{
+		      templateUrl:"tml/list.html"
+		    })
+		  
+		    .when('/list2',{
+		      templateUrl:"tml/list2.html"
+		    })
+		    .when('/list3',{
+		      templateUrl:"tml/list3.html"
+		    })
+		    .when('/list4',{
+		      templateUrl:"tml/list4.html"
+		    })
+		    .when('/list5',{
+		      templateUrl:"tml/list5.html"
+		    })
+		    .when('/list6',{
+		      templateUrl:"tml/list6.html"
+		    })
+		    .when('/jiesuan',{
+		      templateUrl:"tml/jiesuan.html"
+		    })
+		    .when('/denglu',{
+		      templateUrl:"tml/denglu.html"
+		    })
+		    .when('/denglus',{
+		      templateUrl:"tml/denglus.html"
+		    })
+		    .when('/zhuce',{
+		      templateUrl:"tml/zhuce.html"
+		    })
+		}
+
+		app.directive('direc',function(){
+	    // 1.为什么返回?
+		    return {
+		        restrict:'AE', //四种都可以渲染
+		        replace : true, 
+		        compile:function(){
+		        	// 每渲染一次执行一次
+			        var mySwiper = new Swiper ('#slid1', {
+						  autoplay:1000,
+					});
+		      	}
+		    };
+		});
+
+//------------------------------------
+		app.directive('direc1',function(){
+	    // 1.为什么返回?
+	    return {
+	        restrict:'AE', //四种都可以渲染
+	        replace : true, 
+	        compile:function(){
+	        	// 每渲染一次执行一次
+	        	// 初始化一个商品翻页
+		        var mySwiper = new Swiper ('#slid2', {
+		        	watchSlidesProgress : true,
+              		watchSlidesVisibility : true,
+              		slidesPerView:2,
+		        	// width:400,
+		        	// height:600,
+						});
+						// 初始化一个header导航菜单栏
+					var mySwiper2 = new Swiper ('#slida', {
+		        	slidesPerView:4,
+		        	watchSlidesProgress : true,
+              		watchSlidesVisibility : true,
+              		// width:680,
+					});
+	      		}
+	    	};
+		});
+//-------------------------------------------
+	
+//----------------------------------------
+		app.controller("cont",function($scope){
+			// 首页
+			$scope.data=[
+              {"goodsId":"a1","img":"./style/images/bptj01.png","describe":"【3袋装】奶油味夏威夷果200g/袋","price":"46.9"},
+               {"goodsId":"a2","img":"./style/images/bptj02.png","describe":"【3袋装】芒果干120g/袋 ","price":"29.9"},
+               {"goodsId":"a3","img":"./style/images/bptj03.png","describe":"抹茶味麻薯210g/袋","price":"11.90"},
+               {"goodsId":"a4","img":"./style/images/bptj04.png","describe":"手撕鱿鱼条80g/袋","price":"9.90"},
+               {"goodsId":"a5","img":"./style/images/bptj05.png","describe":"奶油味手剥山核桃190g/袋","price":"35.90"},
+               {"goodsId":"a6","img":"./style/images/bptj06.png","describe":"【2袋装】奶油味碧根果190g/袋","price":"34.90"}
+      ];
+      // 炒货
+      $scope.data1=[
+              {"goodsId":"a1","img":"./style/images/lista_1.jpg","describe":"【3袋装】奶油味夏威夷果200g/袋","price":"46.9"},
+               {"goodsId":"a2","img":"./style/images/lista_2.jpg","describe":"【2袋装】奶油味碧根果190g/袋 ","price":"34.9"},
+               {"goodsId":"a3","img":"./style/images/lista_3.jpg","describe":"【2袋装】东北松子200g/袋 ","price":"43.9"},
+               {"goodsId":"a4","img":"./style/images/lista_4.jpg","describe":"【2袋装】奶香味巴旦木180g/袋","price":"29.9"},
+               {"goodsId":"a5","img":"./style/images/lista_5.jpg","describe":"【2袋装】盐焗味开心果200g/袋","price":"49.9"},
+               {"goodsId":"a6","img":"./style/images/lista_6.jpg","describe":"【【2袋装】纸皮核桃180g/袋","price":"20.9"},
+               {"goodsId":"a5","img":"./style/images/lista_7.jpg","describe":"【3袋装】黄金玉米豆130g/袋","price":"16.9"},
+               {"goodsId":"a5","img":"./style/images/lista_8.jpg","describe":"【3袋装】熟板栗仁80g/袋","price":"19.9"},
+      ]; 
+      // 果干
+      $scope.data2=[
+              {"goodsId":"a1","img":"./style/images/listb_1.jpg","describe":"【3袋装】芒果干120g/袋","price":"32.9"},
+               {"goodsId":"a2","img":"./style/images/listb_2.jpg","describe":"水果干组合3袋 250g ","price":"31.9"},
+               {"goodsId":"a3","img":"./style/images/listb_3.jpg","describe":"【2盒装】抱抱果260g/盒 红枣夹核桃仁","price":"54.9"},
+               {"goodsId":"a4","img":"./style/images/listb_4.jpg","describe":"【5袋装】脆冬枣35g/袋 ","price":"29.9"},
+               {"goodsId":"a5","img":"./style/images/listb_5.jpg","describe":"【2袋装】草莓干100g/袋","price":"19.9"},
+               {"goodsId":"a6","img":"./style/images/listb_6.jpg","describe":"四色葡萄干组合800g 4袋装","price":"35.9"},
+               {"goodsId":"a5","img":"./style/images/listb_7.jpg","describe":"无核白葡萄干200g/袋","price":"12.9"},
+               {"goodsId":"a5","img":"./style/images/listb_8.jpg","describe":"黑加仑葡萄干200g/袋","price":"13.9"},
+      ]; 
+      $scope.data3=[
+              {"goodsId":"a1","img":"./style/images/listc_1.jpg","describe":"【进口美食】瑞典ICA 50%水果果仁燕麦片750g","price":"39.9"},
+               {"goodsId":"a2","img":"./style/images/listc_2.jpg","describe":"【进口美食】台湾三点一刻港式奶茶100g","price":"13.9"},
+               {"goodsId":"a3","img":"./style/images/listc_3.jpg","describe":"【进口美食】香港Canute咖啡味曲奇饼干160g","price":"48"},
+               {"goodsId":"a4","img":"./style/images/listc_4.jpg","describe":"【进口美食】香港Canute巧克力味曲奇饼干160g","price":"48"},
+               {"goodsId":"a5","img":"./style/images/listc_5.jpg","describe":"【进口零食】台湾老杨咸蛋黄饼100g","price":"15.8"}
+      ];
+      $scope.data4=[
+              {"goodsId":"a1","img":"./style/images/listd_1.jpg","describe":"【鱿鱼干组合3袋装】鱿鱼足+鱿鱼条+鱿鱼片80g/袋","price":"29.9"},
+               {"goodsId":"a2","img":"./style/images/listd_2.jpg","describe":"【2袋装】手撕鱿鱼条80g/袋 ","price":"20.9"},
+               {"goodsId":"a3","img":"./style/images/listd_3.jpg","describe":"香酥小黄鱼200g/袋","price":"16.9"},
+               {"goodsId":"a4","img":"./style/images/listd_4.jpg","describe":"【2袋装】泡椒凤爪200g/袋 ","price":"25.9"},
+               {"goodsId":"a5","img":"./style/images/listd_5.jpg","describe":"猪肉枣180g/袋 烟熏味小香肠","price":"18.9"},
+               {"goodsId":"a6","img":"./style/images/listd_6.jpg","describe":"【2袋装】烧烤味牛板筋125g","price":"25.9"},
+               {"goodsId":"a5","img":"./style/images/listd_7.jpg","describe":"【2袋装】麻辣味牛板筋125g/袋","price":"24.9"},
+               {"goodsId":"a5","img":"./style/images/listd_8.jpg","describe":"麻辣牛肉200g/袋","price":"25.9"},
+      ];
+      $scope.data5=[
+              {"goodsId":"a1","img":"./style/images/liste_1.jpg","describe":"抹茶味麻薯210g/袋","price":"11.9"},
+              {"goodsId":"a2","img":"./style/images/liste_2.jpg","describe":"【夹心麻薯210gx3袋】红豆/抹茶/芒果3种口味","price":"29.9"},
+              {"goodsId":"a3","img":"./style/images/liste_3.jpg","describe":"【2袋装】蔓越莓曲奇饼干100g/袋","price":"13.9"},
+              {"goodsId":"a4","img":"./style/images/liste_4.jpg","describe":"【2袋装】椰丝球210g/袋 ","price":"22.8"},
+              {"goodsId":"a5","img":"./style/images/liste_5.jpg","describe":"黄金椰丝麻薯210g/袋","price":"11.8"},
+              {"goodsId":"a6","img":"./style/images/liste_6.jpg","describe":"三生三世定制款桃花心糯米团子800g","price":"52.9"},
+              {"goodsId":"a5","img":"./style/images/liste_7.jpg","describe":"【2袋装】山核桃仁小酥210g/袋","price":"18.9"},
+              {"goodsId":"a5","img":"./style/images/liste_8.jpg","describe":"凤梨酥300g/盒 ","price":"14.8"},
+      ];
+      $scope.data6=[
+              {"goodsId":"a1","img":"./style/images/listf_1.jpg","describe":"卤香鹌鹑蛋128g/袋","price":"13.9"},
+              {"goodsId":"a2","img":"./style/images/listf_2.jpg","describe":"【2袋装】甜辣薄豆干200g/袋","price":"24.9"},
+              {"goodsId":"a3","img":"./style/images/listf_3.jpg","describe":"香辣味鱼豆腐260g/袋","price":"16.9"},
+              {"goodsId":"a4","img":"./style/images/listf_4.jpg","describe":"五香味鱼豆腐260g/袋 ","price":"15.9"},
+              {"goodsId":"a5","img":"./style/images/listf_5.jpg","describe":"香辣卤藕180g/袋","price":"9.9"},
+              {"goodsId":"a6","img":"./style/images/listf_6.jpg","describe":"卤香味鸡蛋干200g/袋","price":"11.8"},
+              {"goodsId":"a5","img":"./style/images/listf_7.jpg","describe":"甜辣薄豆干200g/袋","price":"12.9"},
+              {"goodsId":"a5","img":"./style/images/listf_8.jpg","describe":"【2袋装】香辣卤藕180g/袋","price":"18.9"},
+      ];  
+            angular.forEach($scope.data,function(item,index){
+            	// console.log(item);
+            	item.num=0;
+            	item.price=-(-(item.price));
+            })
+            $scope.set=function(goodsId,bool){
+            	// console.log(goodsId);
+            	angular.forEach($scope.data,function(item,index){
+            		if(goodsId==item.goodsId){
+            			if(bool){
+							if(item.num==0){
+								item.num=1;
+								 $scope.cart.push(item);
+							}else{
+								item.num++;
+								console.log(item.num);
+							}
+            			}else{
+            					item.num--;
+            					item.num=item.num<=0?0:item.num;
+            					
+            			}
+            		}
+
+            	})
+
+            		// console.log($scope.cart);
+            	
+            }
+         	$scope.cart=[];
+           
+
+
+      $scope.totalPrice=function(){
+				var allPrice=0;
+				for(var i=0;i<$scope.data.length;i++){
+					allPrice+=$scope.data[i].num*$scope.data[i].price;
+				}
+				return allPrice;
+			}
+
+			// 删除区
+			$scope.del=function(active){
+				$scope.cart.splice(active,1);
+			}
+
+			// 显示区
+
+			$scope.bool=false;
+			$scope.up = function(){
+				$scope.bool=!$scope.bool
+			}
+
+
+		$scope.end=function(){
+			
+		}
+
+			// 总价
+
+	 	$scope.sumPrice=function(){
+            var allPrice=0;  
+            angular.forEach($scope.cart,function(item,index){
+               // 计算总价 
+                allPrice+=item.num*item.price;
+                if(item.num<=0){$scope.cart.splice(index,1)};
+            })
+            return allPrice;
+        }
+
+    // 购物车点击背景图片开始
+    $scope.str2=function(){
+			var flyer = $('<img class="u-flyer" src="./style/images/icon_cart3_white.png","describe">');
+            //鼠标在页面点击开始位置计算.
+			var top = $(window).scrollTop();
+			
+			var dh = event.pageY;
+
+			var newh = dh - top;
+
+
+			// 购物车按钮  end在那图片飘到哪
+			var oDiv = $('#end').offset();
+
+
+			var newdh = oDiv.top - top;
+
+			// 我可以设置初始,结束,图片宽度
+			flyer.fly({
+				start: {
+					left: event.pageX,
+					top: newh,
+					// width:1000,
+					// height:1000,
+					// 初始的图片样式我可以设置在class类里面
+				},
+				end: {
+					left: oDiv.left,
+					top: newdh,
+					width: 0,
+					height: 0
+				}
+			});
+		};
+	
+		// 购物车点击背景图片结束
+		// function setIco(event) {
+
+  //           // 变量区,当前按钮,当前图片
+		// }
+
+		});
+
+
+
+
+	</script>
+	
+	
+	
+</body>
+</html>

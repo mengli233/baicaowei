@@ -1,0 +1,88 @@
+<div class="warp">
+	<header>
+		<!-- <img class="heade_logo" src="./style/images/icon_logo.png" alt=""> -->
+		<div class="headerw"></div>
+		<img class="head-x" id="hedImg" ng-click="up()" src="./style/images/icon_search_2.png" alt="">
+		<!-- 搜索 -->
+		<div class="search" ng-show="bool">
+			<img class="fl search_img" src="./style/images/dso1.png" alt="">
+		
+				<form action="" >
+					<img  class="search_img1" src="./style/images/icon_search_3.svg" alt="">
+					<input class="formA"  type="text" ng-model="str1" placeholder="618大促">
+				</form>
+		
+			<span>搜索</span>
+		</div>
+		<!-- 搜索结束 -->
+		<div class="contert" direc1>
+			<!-- 菜单导航、 -->
+			<div class="swiper-container" id="slida">
+				<div class="swiper-wrapper">
+			        <div class="swiper-slide gj "><a href="#/">推荐</a></div>
+			        <div class="swiper-slide gj"><a href="#/list">坚果炒货</a></div>
+			        <div class="swiper-slide gj"><a href="#/list2">果干蜜饯</a></div>
+			        <div class="swiper-slide gj gjb"><a href="javascript:;">进口美食</a></div>
+			        <div class="swiper-slide gj"><a href="#/list4">肉脯海鲜</a></div>
+			        <div class="swiper-slide gj"><a href="#/list5">糕点糖果</a></div>
+			        <div class="swiper-slide gj"><a href="#/list6">豆干素食</a></div>
+			    </div>
+			</div>
+			<!-- 菜单导航结束 -->
+		</div>
+	</header>
+	<div class="lisCont">
+		<div class="bigShows">
+			<div direc></div>
+				<img class="" src="./style/images/lista3.png" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="shdull">
+		<div class="contenx fl" ng-repeat="item in data3|filter:{describe:str1}|orderBy:str1">
+			
+			<img class="bktjA" ng-src="{{item.img}}" alt="">
+			<div>
+				<p class="pro_p2">{{item.describe}}</p>
+				<div class="mjuu">
+					<div class="fl pirce"><span>{{item.price|currency:"￥"}}</span></div>
+					<div class="fr ssss " id="btnImg" ng-click="set(item.goodsId,true)" >
+						<img class="ioi" ng-click="str2()" src="./style/images/icon_cart3_white.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer>
+	<nav class="nav3">
+		<div>
+			<img src="./style/images/foo1.png" alt="">
+			<p style="color:#FF4F39">首页</p>
+		</div>
+		<div>
+			<img src="./style/images/foo2.png" alt="">
+			<p>分类</p>
+		</div>
+		<div>
+			<img src="./style/images/foo3.png" alt="">
+			<p>吃乎</p>
+		</div>
+		<div>
+			<a href="#/jiesuan" id="end" ng-click="end()">
+				
+				<img src="./style/images/foo4.png" alt="">
+
+				<p>购物车</p>
+				<em ng-model="item.num">{{cart.length}}</em>
+			</a>
+		</div>
+		<div>
+			<a href="#/denglu">
+				<img src="./style/images/foo5.png" alt="">
+
+				<p>我的</p>
+			</a>
+		</div>
+	</nav>
+</footer>

@@ -1,0 +1,125 @@
+<div class="d_header" style="z-index:9999;">
+	<a href="#/"><img src="./style/images/dso1.png" alt=""></a>
+	<span style="position:absolute;top:0.21rem;left:35%;font-size:1rem;">注册</span>
+</div>
+<div class="sd">
+	
+	<div class="formd">
+		<form action="" >
+			<div class="inp1">
+				<i></i>
+				<input class="uaname photo" type="text"  placeholder="手机号" value="">
+			</div>
+			<br>
+			<div class="inp2">
+				<i></i>
+				<input class="dd key" type="number" name="number" placeholder="验证码" value="">
+				<a id="boi" class="keyYan" href="javascript:;">获取验证码</a>
+				
+			</div>
+			<br>
+			<div class="inp3">
+				<i></i>
+				<input class="uaname mWork" type="text"  placeholder="密码" value="">
+			</div>
+			<br>
+			<input class="subm" type="submit" value="登录">
+			
+		</form>
+	</div>
+</div>
+<script>
+
+// 获取验证码走短信接口
+	$("#boi").click(function(){
+		var photo = $(".photo").val();
+		var key = $(".key").val();
+
+				var userName = "帐号"     
+        var Password = "密码"     
+        var Url = "http://service.winic.org/webservice/public/remoney.asp?uid="&userName&"&pwd="&Password&""
+
+		
+		var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/; 
+		if(!myreg.test(photo)) 
+			{ 
+			    alert('请输入有效的手机号码！'); 
+			    return false; 
+			}else{
+				                
+                                                    
+   /* function HTTP_GET(url)     
+        dim http     
+        set http = Server.CreateObject("Microsoft.XMLHTTP")   
+        http.Open"get",url,false     
+        http.setRequestHeader "Content-type:" ,"text/xml; charset=GB2312"     
+        http.Send   
+        HTTP_GET = http.RespinseText    
+        end function  
+           
+    response.Write HTTP_GET(url) */
+				$.ajax({
+					url: Url,
+					type: 'POST',
+					dataType: 'text',
+					data: {param1: 'myreg'},
+					headers: {
+            "Access-Control-Allow-Origin":Url,
+            "Access-Control-Allow-Headers":"X-Requested-With"
+        	}
+				})
+				.done(function() {
+					console.log("success");
+				})
+				.fail(function() {
+					console.log("error");
+				})
+				.always(function() {
+					console.log("complete");
+				});
+				
+			}
+
+
+	})
+
+
+
+
+
+
+
+
+
+
+
+
+	$(".subm").click(function(){
+		/*手机号匹配*/
+		var photo = $(".photo").val();
+		var key = $(".key").val();
+		var mWork = $(".mWork").val();
+		/*密码匹配*/
+		
+		var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/; 
+		if(!myreg.test(photo)) 
+		{ 
+		    alert('请输入有效的手机号码！'); 
+		    return false; 
+		}
+		console.log(key);
+
+
+
+/*
+		if(photo!=''&& mWork!=''){
+			location.href="#/";
+			
+		}
+*/
+
+
+	})
+		
+	
+</script>

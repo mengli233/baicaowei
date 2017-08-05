@@ -1,0 +1,78 @@
+<div class="j-header" ng-conreoller="cont" style="z-index:99">
+	<h4>购物车</h4>
+	<span class="fr" ng-click="del(item.cart)">删除</span>
+</div> 
+<div class="bdhsbdha" >
+	<div class="j_youhui">
+		<span>包邮</span>
+		<span>您已享<em>68元包邮</em></span>
+	</div>
+	<div class="j_shoppw" ng-show="!cart.length">
+		<div class="jiMa">
+			<img src="./style/images/none_cart.png" alt="">
+			<p>购物车是空的</p>
+			<p>赶紧去探索属于你的百草味吧~</p>
+		</div>
+	</div>
+	<div class="j_shopp" >
+		<!-- <div class="jiMa">
+			<img src="./style/images/none_cart.png" alt="">
+			<p>购物车是空的</p>
+			<p>赶紧去探索属于你的百草味吧~</p>
+		</div> -->
+		<ul>
+			<li ng-repeat="item in cart">
+				<i></i>
+				<div class="j_img"><img ng-src="{{item.img}}" alt=""></div>
+				<div class="j_text">
+					<p>{{item.describe}}</p>
+					<p>{{item.price|currency:"￥"}}</p>
+				</div>
+				<div class="btnA">
+					<button ng-click="set(item.goodsId,false)">-</button>
+					<span ng-model="item.num">{{item.num}}</span>
+				<button ng-click="set(item.goodsId,true)">+</button>
+				</div>
+				<em class="emb" ng-click="del(item.cart)">删除</em>
+			</li>
+		</ul>
+	</div>
+</div>
+<footer>
+	<div class="j_foter">
+		<i></i>
+		<span class="j_foter-s">去结算</span>
+		<div class="j_foter-d">
+			<p>合计:<span>{{sumPrice()|currency:"￥"}}</span></p>
+			<p>活动优惠:￥<span>0</span></p>
+		</div>
+	</div>
+	<nav class="nav3">
+		<div>
+			<a href="#/">
+				<img src="./style/images/js1.png" alt="">
+			<p>首页</p>
+			</a>
+		</div>
+		<div>
+			<img src="./style/images/foo2.png" alt="">
+			<p>分类</p>
+		</div>
+		<div>
+			<img src="./style/images/foo3.png" alt="">
+			<p>吃乎</p>
+		</div>
+		<div >
+			<a href="#/jiesuan">
+				<img src="./style/images/jc.png" alt="">
+				<p ng-click="set(item.goodsId,true)" style="color:#FF4F39">购物车</p>
+			</a>
+		</div>
+		<div>
+			<a href="#/denglu">
+				<img src="./style/images/foo5.png" alt="">
+				<p>我的</p>
+			</a>
+		</div>
+	</nav>
+</footer>

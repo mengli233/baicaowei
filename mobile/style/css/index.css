@@ -1,0 +1,752 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-weight: normal;
+	color:#333;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color:#333;
+	font-weight: normal;
+}
+i,em,strong,b{
+	font-style: normal;
+}
+input,textarea{
+	-webkit-tap-highlight-color:none;
+	border: 0;
+	-webkit-appearance:none;
+}
+.warp{
+	width:100%;
+	height:auto;
+	margin-bottom: 4rem;
+	overflow: hidden;
+}
+.bg-rb{
+	border-right:0.05rem solid #EBECEC;
+}
+.bg-bb{
+	border-bottom:0.05rem solid #EBECEC;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+/*首页头部开始*/
+header{
+	width: 100%;
+    hieght: 1.1rem;
+    background: #fff;
+    padding: 0.18rem 0;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 88888;
+    border-bottom: 1px solid #ededed;
+}
+.headerw{
+	width: 4.65rem;
+	height: 2.0rem;
+	background: url(../images/icon_logo.png) no-repeat;
+	background-size:cover;
+	margin: 0 auto;
+	margin-bottom: 0.3rem;
+}
+header .heade_logo{
+	width: 4.65rem;
+    height: 2.0rem;
+    display: block;
+    margin-left: 6.4rem;
+   
+    /* padding: 0.3rem 0; */
+}
+.head-x{
+	width: 0.95rem;
+    height: 0.95rem;
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+}
+/*导航菜单*/
+#slida .gj{
+	font-size: 0.6rem;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+#slida .gjb{
+	border-top: 0.03rem solid #FF4F39;
+}
+#slida .gjb a{
+	color:#FF4F39;
+}
+/*搜索开始*/
+
+.search{
+	height: 1.5rem;
+  display: block;
+  position: relative;
+  border-top:0.05rem solid #ddd;
+}
+.search .search_img{
+	width: 0.3rem;
+    height: 0.5rem;
+    display: inline-block;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.3rem;
+}
+.formA{
+	width: 13.0rem;
+    background: #f5f5f5;
+    margin: 0 auto;
+    border-radius: 1.3rem;
+    position: absolute;
+   	left: 1.2rem;
+    top: 0.25rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-indent: 1.35rem;
+    font-size: 0.6rem;
+}
+form em{
+	width: 0.6rem;
+	height:0.6rem;
+	background: url(../images/icon_search_3.svg) no-repeat;
+	background-size: cover;
+	display: inline-block;
+}
+.formA input{
+	border-style: none;
+	padding:0.2rem 1rem;
+
+}
+.search span{
+	font-weight: inherit;
+    font-size: 0.6rem;
+    position: absolute;
+    right: 0.rem;
+    top: 0.35rem;
+    right: 0.3rem;
+}
+.search_img1{
+	width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    position: absolute;
+    top: 0.27rem;
+    left: 1.39rem;
+    z-index: 9999999;
+}
+/*搜索结束*/
+/*首页头部结束*/
+/*中间主体开始*/
+.contert{
+	width: 100%;
+    background:#fff;
+}
+.contert .nav1 {
+	font-size: 0.6rem;
+	border-top:0.05rem solid #EBECEC;
+}
+.contert .nav1 span{
+	display: inline-block;
+    padding:0.35rem 0.467677rem;
+    background: #fff;
+    margin: 0;
+    margin-right: -0.21rem;
+    
+}
+
+/*中间主体结束*/
+/*lunbo*/
+.lunbo{
+	width:100%;
+	height:auto;
+}
+.bigImg{
+	width: 15.8rem;
+	height: 8.0rem;
+	display: block;
+}
+.bigShows{
+	background: #fff;
+	overflow: hidden;
+}
+.bigShows img{
+	width: 100%;
+}
+/*/lunbo*/
+/*签到nav开始*/
+.nav2 {
+	padding: 0.55rem 0;
+}
+.nav2 div{
+	width:25%;
+	float: left;
+	text-align: center;
+}
+.nav2 img{
+	width: 2.5rem;	
+	height:2.5rem;
+}
+.nav2 div p{
+	font-size: 0.6rem;
+}
+/*签到nav结束*/
+.banner{
+	width:100%;
+}
+.dsix{
+	width:16rem;
+	height:5.0rem;
+}
+.hot{
+	width:100%;
+	overflow: hidden;
+}
+.hotImg1{
+	width:7.9rem;
+	height:9.5rem;
+	display: block;
+	padding-right: 0.057rem;
+}
+.hotImg2{
+	width:7.9rem;
+	height:4.75rem;
+	display: block;
+}
+.hotXImg{
+	width:16rem;
+	height:3.05rem;
+}
+/*新品推荐*/
+.content_x{
+	width:100%;
+}
+.content_x ul {
+	overflow: hidden;
+}
+.content_x ul li{
+	padding: 0 1rem 5rem 1rem;
+}
+.cpro_img{
+	width: 2.5rem;
+	height: 2.5rem;
+}
+.cpro_img img{
+	display: block;
+	width: 5.0rem;
+	height: 5.0rem;
+}
+.con_pro{
+	display: inline-block;
+    margin-left: 3.8rem;
+    height: 4.56rem;
+    position: relative;
+}
+.pro_conter{
+	font-size: 0.6rem;
+	font-weight: normal;
+	width: 7.3rem;
+}
+.pro_price{
+	color: #FF4F39;
+    font-size: 0.5rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    left:0;
+}
+.con_pro h6{
+	line-height: 1.5rem;
+}
+.con_pro .pro_conter{
+	font-size: 0.6rem;
+    font-weight: inherit;
+}
+.ds{
+	width: 100%;
+	height:3rem;
+	background:#ededed;
+}
+.shd{
+	height:2rem;
+}
+/*横向轮播开始*/
+.scroll{
+	width: 100%;
+	height: auto;
+}
+.scrollImg{
+	width:18.75rem;
+	height: 9.0rem;
+	display: block;
+	margin:0;
+}
+.qqs img{
+	width:80%;
+	height: 80%;
+	margin:0 auto;
+	display: block;
+  
+}
+.qqs p{
+  text-align: center;
+  font-size: 0.6rem;
+  padding-top: 0.5rem;
+}
+.qqs p:last-child{
+	color:#f00;
+	padding-bottom: 0.5rem;
+}
+/*横向轮播结束*/
+/*小鱼干结束*/
+.shdu{
+	height:auto;
+	width:100%;
+	background: #eee;
+margin-bottom: 3rem;
+}
+.shuii{
+	height: 0.5rem;
+	background: #eee;
+}
+.ss{
+	display: block;
+}
+.contenx{
+	width: 50%;
+    font-size: 0.6rem;
+    padding: 0.6rem 0;
+    position: relative;
+    margin: 0;
+    height: 9.1rem;
+}
+.contenx p{
+	font-size: 0.5rem;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+.conteny{
+	width: 50%;
+}
+.bktjA{
+	width:5.9rem;
+    height:5.9rem;
+    display: block;
+    margin: 0 auto;
+}
+.pirce{
+	color: #FF4F39;
+	font-size: 0.5rem;
+	position: absolute;
+	bottom: 0.5rem;
+}
+.mjuu{
+	width: 80%;
+	margin:0 auto;
+
+}
+.hiegh{
+	height: 1.34rem;
+}
+.ioi{
+	padding:0.02rem 0.75rem;
+	width: 0.6rem;
+	height: 0.6rem;
+	display: block;
+
+}
+.ssss{
+	background: #FF4F39;
+    border-radius: 0.7rem;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.6rem;
+}
+footer{
+	height: auto;
+	padding: 0.4rem 0 0.2rem 0;
+	background: #fff;
+	position: fixed;
+	left:0;
+	right: 0;
+	bottom:0;
+	box-shadow: 1px 0 1px 1px #e5e5e5;
+    z-index: 98;
+    border-top: solid 1px #e5e5e5;
+}
+#end em{
+	font-size: 0.53rem;
+    position: absolute;
+    top: 0.2rem;
+    left: 72%;
+    color: #FF4F39;
+}
+.nav3 div{
+	width:20%;
+	float: left;
+	text-align: center;
+}
+.nav3 div:first-child{
+
+}
+.nav3 div img{
+	width:1.2rem;
+	height: 1.1rem;
+	display: block;
+	margin:0 auto;
+}
+.nav3 div p{
+	font-size:0.6rem;
+	height:0.6rem;
+	line-height: 0.6rem;
+	padding: 0.3rem 0;
+}
+
+
+/*结算页开始*/
+.j-header{
+	width: 100%;
+	height: auto;
+	background: #fff;
+	text-align: center;
+	padding:0.8rem 0;
+	font-size:0.7rem;
+	border-bottom: 0.05rem solid #ddd;
+	position: fixed;
+	top:0;
+	right:0;
+	left:0;
+}
+.bdhsbdha{
+	
+}
+h4{
+	font-weight: inherit;
+	display: inline;
+	margin-left: 2rem;
+}
+.j-header span{
+	padding:0 0.5rem 0 0;
+}
+/*结算页结束*/
+.j_youhui{
+	width: 100%;
+	height:1.6rem;
+	background: #fff;
+	margin-top: 2.6rem;
+	font-size: 0.6rem;
+	font-weight: inherit;
+	color: #333;
+	line-height: 1.6rem;
+	border-bottom: 1px solid #ddd;
+}
+
+.j_youhui span:first-child{
+	font-size: 0.5rem;
+	padding:0.08rem 0.3rem;
+	border:0.05rem solid #FF4348;
+	margin:0 0.25rem;
+	color: #FF4348;
+}
+.j_shoppw{
+	background: #ededed;
+  height: 25.7rem;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+.jiMa{
+	  width: 100%;
+    padding: 4rem 0;
+}
+.jiMa img{
+	display: block;
+	width: 6.5rem;
+	height: 6.5rem;
+	margin:0 auto;
+}
+.jiMa p{
+	font-size: 0.6rem;
+	text-align: center;
+	line-height: 1rem;
+}
+.j_shopp li{
+	width:100%;
+	border-bottom: 0.05rem solid #eee;
+	padding:0.5rem 0;
+	position: relative;
+}
+.j_shopp li i{
+	width: 0.9rem;
+	height: 0.9rem;
+	background:url(../images/check_r.png);
+	background-size: cover;
+	display: block;
+	position: absolute;
+	top:1.8rem;
+	left:0.5rem;
+}
+.j_img{
+	width: 3.75rem;
+	height: 3.75rem;
+	border:1px solid #FF4F39;
+	margin-left:1.75rem;
+}
+.j_img img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.j_text{
+  font-size: 0.5rem;
+  font-weight: inherit;
+  position: absolute;
+  left: 6.5rem;
+  top: 0.5rem;
+  height: 3.9rem;
+}
+.j_text p:last-child{
+	position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #FF4F39;
+}
+.btnA{
+	font-size: 0.7rem;
+  position: absolute;
+  right: 1rem;
+  top: b;
+  bottom: 0.5rem;
+}
+.btnA button{
+	width: 1.0rem;
+  height: 1.0rem;
+  border: 0.05rem solid #ddd;
+  font-size: 0.8rem;
+  background: #fff;
+  border-style: none;
+  border: 0.05rem solid #eee;
+  text-align: center;
+  color: #999;
+}
+.j_foter{
+	padding:1rem 0;
+	background: #fff;
+	font-size: 0.6rem;
+	border-bottom:0.05rem solid #ddd;
+}
+.j_foter i{
+	width: 0.9rem;
+  height: 0.9rem;
+  background: url(../images/check_r.png);
+  background-size: cover;
+  display: block;
+  position: absolute;
+  top: 0.8rem;
+  left: 0.5rem;
+}
+.emb{
+	font-size: 0.5rem;
+    position: absolute;
+    top: .5rem;
+    right: 1rem;
+    color: #ddd;
+}
+.j_foter span:nth-child(2){
+	padding: 0.3rem 1.5rem;
+  background: #FF4F39;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.65rem;
+  border-radius: 1rem;
+  color: #fff;
+}
+.j_foter-d{
+	position: absolute;
+	top: 0.5rem;
+	left: 5.5rem;
+}
+.j_foter-d p:first-child span{
+	font-size: 0.7rem;
+	color:#FF4F39;
+}
+/*结算页结束*/
+/*登录页*/
+.d_header{
+	  padding: 0.5rem 0;
+    background: #fff;
+    border-bottom: 0.05rem solid #ddd;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.d_header a img{
+	width:0.6rem;
+	height: 0.95rem;
+	display: inline-block;
+	padding-left: 1.5rem;
+	z-index: 9999;
+}
+.d_header p{
+	width: 80%;
+	margin:0 auto;
+}
+.d_header span{
+	width: 35%;
+  display: inline-block;
+  text-align: center;
+  font-size: 0.6rem;
+  padding: 0.3rem 0;
+}
+.d_header span:first-child{
+	margin:0 auto;
+}
+.sd{
+	background: #EEEEEE;
+  width: 100%;
+  margin-top: 2.45em;
+  height: 26rem;
+}
+.sd span{
+	width: 50%;
+	height: 1rem;
+	display: inline-block;
+	float: left;
+	font-size: 0.7rem;
+	text-align: center;
+	padding:0.5rem 0;
+}
+
+.formd{
+	width: 100%;
+  padding: 2rem 0;
+  clear: both;
+}
+.uaname,.dd{
+	text-indent: 1.1rem;
+}
+.uaname,.dd,.subm{
+	width: 80%;
+    display: block;
+    height: 1rem;
+    border-radius: 1rem;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    font-size: 0.6rem;
+    outline:medium;
+}
+.subm{
+	background: #FF4F39;
+  font-size: 0.7rem;
+  padding: 0.5rem 0;
+  height: 2rem;
+  width: 90%;
+  color: #fff;
+}
+.inp1,.inp2,.inp3{
+	position: relative;
+}
+.keyYan{
+	color: red;
+    font-size: 0.7rem;
+    display: inline-block;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    padding: 0 0.5rem;
+    border-left: 1px solid #ddd;
+}
+.inp1 i{
+	width: 1.5rem;
+    height: 1.5rem;
+    background: url(../images/photo.png) no-repeat;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    top: 0.2rem;
+    left: 1.3rem;
+}
+.inp2 i{
+	width: 1.5rem;
+    height: 1.5rem;
+    background: url(../images/jing.png) no-repeat;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    top: 0.2rem;
+    left: 1.3rem;
+}
+.inp3 i{
+	width: 1.5rem;
+    height: 1.5rem;
+    background: url(../images/suo.png) no-repeat;
+    background-size: cover;
+    display: block;
+    position: absolute;
+    top: 0.2rem;
+    left: 1.3rem;
+}
+.u-flyer{
+	background: red;
+	padding:0.2rem 0.5rem;
+	border-radius: 10rem;
+}
+   /*zhuce*/
+.center{margin:0 auto}
+     
+.lisCont{
+	width: 100%;
+	height: auto;
+	background: #ededed;
+	margin-top: 4rem;
+}   
+.gj1{
+border-top: 0.03rem solid #FF4F39;
+}
+.gj1 a{
+	color:#FF4F39;
+} 
+.shdull{
+	margin-top: -4rem;
+    padding-bottom: 22rem;
+    height: 24rem;
+}
+
+
+// 修改首页
+.fehfeh{
+	height: 60rem;
+	background: #ddd;
+	width: 100%;
+	overflow: hidden;
+	padding:4rem 0;
+}
+.df{
+	height: 3rem;
+	margin-bottom: 8rem;
+}
+.sdsad{
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	padding:0.5rem 0 0 0;
+	background: #ededed;
+}
+.dd div{
+	background: #fff;
+}
+
+
